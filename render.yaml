@@ -1,0 +1,34 @@
+# ═══════════════════════════════════════════════
+# ARYA & MENTAL COLLAB BOT — Render Blueprint
+# ═══════════════════════════════════════════════
+#
+# How to use:
+#   1. Push this file to GitHub repo root
+#   2. Render Dashboard → Blueprint → New
+#   3. Select this repo
+#   4. Fill TELEGRAM_BOT_TOKEN + TELEGRAM_OWNER_ID
+#   5. Apply
+#
+
+services:
+  - type: web
+    name: arya-mental-bot
+    env: node
+    region: singapore
+    plan: free
+    branch: main
+    buildCommand: npm install
+    startCommand: node --expose-gc --unhandled-rejections=warn bot.js
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_OWNER_ID
+        sync: false
+      - key: DATA_DIR
+        value: .
+      - key: TZ
+        value: Asia/Kolkata
+      - key: NODE_VERSION
+        value: "20"
