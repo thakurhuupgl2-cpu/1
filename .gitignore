@@ -1,0 +1,72 @@
+# ═══════════════════════════════════════════════
+# ARYA & MENTAL COLLAB BOT — Git Ignore
+# ═══════════════════════════════════════════════
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# WhatsApp sessions & runtime data — NEVER commit
+sessions/
+store/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Build outputs
+dist/
+build/
+out/
+*.tgz
+
+# Temp files
+tmp/
+temp/
+*.tmp
+*.bak
+*.cache
+
+# Test
+coverage/
+.nyc_output/
+
+# Render
+.render/
+
+# Prevent accidental leaks
+*.pem
+*.key
+secrets.json
+credentials.json
